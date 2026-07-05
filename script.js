@@ -219,6 +219,114 @@
                     { name: "تحميل مابات اللعبة", url: "https://linkjust.com/KsQqRNMMEhqPGW", icon: "fas fa-download" }
                 ]
             },
+            repo: {
+                title: "R.E.P.O",
+                description: "دةالباسورد بتاع ملفات فك ضغط اللعبة والاونلاين:online-fix.me",
+                image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3241660/1ea445e044a2d5b09cfa8291350b63ebed6e5741/header.jpg?t=1759236707.png",
+                platform: "PC",
+                rating: 4.9,
+                category: "games",
+                size: "1 G",
+                developer: "R.E.P.O",
+                releaseYear: "2026",
+                language: "العربية + متعدد اللغات",
+                videoId: "#",
+                version: "v0.4.4.3",
+                onlineStatus: true, // متاح اونلاين
+                systemRequirements: {
+                    minimum: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i3-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R5 240",
+                        storage: "2 GB متاح"
+                    },
+                    recommended: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i5-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R7 250x",
+                        storage: "2 GB متاح"
+                    }
+                },
+                downloadLinks: [
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/avr3dwpTU2hdA", icon: "fas fa-download" },
+                    { name: "ملف الاونلاين", url: "https://gofile.io/d/cfKaqo", icon: "fas fa-wifi" },
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/PO2AE9MqF", icon: "fas fa-download" }
+                ]
+            }, 
+            fearstofathom: {
+                title: "Fears to Fathom Scratch",
+                description: "دةالباسورد بتاع ملفات فك ضغط اللعبة والاونلاين:online-fix.me",
+                image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4121170/2a85fafce01d2646767ce0b24c4b1d7807b462d9/capsule_616x353.jpg?t=1781141362.png",
+                platform: "PC",
+                rating: 4.9,
+                category: "games",
+                size: "2.62G",
+                developer: "Fears to Fathom Scratch",
+                releaseYear: "2026",
+                language: "العربية + متعدد اللغات",
+                videoId: "WCUhRdcLcRY",
+                version: "v23672048",
+                onlineStatus: true, // متاح اونلاين
+                systemRequirements: {
+                    minimum: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i3-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R5 240",
+                        storage: "5 GB متاح"
+                    },
+                    recommended: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i5-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R7 250x",
+                        storage: "5 GB متاح"
+                    }
+                },
+                downloadLinks: [
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/EdbBZgjseY9", icon: "fas fa-download" },
+                    { name: "ملف الاونلاين", url: "https://gofile.io/d/KvbXsq", icon: "fas fa-wifi" },
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/EdbBZgjseY9", icon: "fas fa-download" }
+                ]
+            }, 
+            solarpunk: {
+                title: "Solarpunk",
+                description: "دةالباسورد بتاع ملفات فك ضغط اللعبة والاونلاين:online-fix.me",
+                image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1805110/0c963cfd748e799d234f3205ddb9f35787c10323/capsule_616x353.jpg?t=1782219094.png",
+                platform: "PC",
+                rating: 4.9,
+                category: "games",
+                size: "1.1G",
+                developer: "Solarpunk",
+                releaseYear: "2026",
+                language: "العربية + متعدد اللغات",
+                videoId: "WCUhRdcLcRY",
+                version: "v299719",
+                onlineStatus: true, // متاح اونلاين
+                systemRequirements: {
+                    minimum: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i3-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R5 240",
+                        storage: "5 GB متاح"
+                    },
+                    recommended: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i5-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R7 250x",
+                        storage: "5 GB متاح"
+                    }
+                },
+                downloadLinks: [
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/CnQo3p1BAAY0VoO", icon: "fas fa-download" },
+                    { name: "ملف الاونلاين", url: "https://gofile.io/d/AFHkdR", icon: "fas fa-wifi" },
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/CnQo3p1BAAY0VoO", icon: "fas fa-download" }
+                ]
+            },   
             backroomcompany: {
                 title: "Backroom Company",
                 description: "دةالباسورد بتاع ملفات فك ضغط اللعبة والاونلاين:online-fix.me",
@@ -251,7 +359,7 @@
                 },
                 downloadLinks: [
                     { name: "تحميل اللعبة", url: "https://linkjust.com/QuLriTbf4fhf", icon: "fas fa-download" },
-                    { name: "تحميل ملف الاونلاين", url: "https://gofile.io/d/uR7fQG", icon: "fas fa-wifi" },
+                    { name: "ملف الاونلاين", url: "https://gofile.io/d/uR7fQG", icon: "fas fa-wifi" },
                     { name: "تحميل اخر للعبة", url: "https://linkjust.com/vNQKlBjV", icon: "fas fa-download" }
                 ]
             },
@@ -866,43 +974,7 @@
                     { name: "تحميل ملف الاونلاين", url: "https://gofile.io/d/Xlwm2m", icon: "fas fa-wifi" },
                     { name: "تحميل اخر للعبة", url: "https://pixeldrain.com/u/Wvxp19jb", icon: "fas fa-download" }
                 ]
-            }, 
-            repo: {
-                title: "R.E.P.O",
-                description: "دةالباسورد بتاع ملفات فك ضغط اللعبة والاونلاين:online-fix.me",
-                image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3241660/1ea445e044a2d5b09cfa8291350b63ebed6e5741/header.jpg?t=1759236707.png",
-                platform: "PC",
-                rating: 4.9,
-                category: "games",
-                size: "1 G",
-                developer: "R.E.P.O",
-                releaseYear: "2025",
-                language: "العربية + متعدد اللغات",
-                videoId: "#",
-                version: "v0.3.2",
-                onlineStatus: true, // متاح اونلاين
-                systemRequirements: {
-                    minimum: {
-                        os: "Windows 8/10/11 (64-Bit)",
-                        processor: "Intel i3-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
-                        memory: "8 GB RAM",
-                        graphics: "NVidia 650TI OR AMD R5 240",
-                        storage: "2 GB متاح"
-                    },
-                    recommended: {
-                        os: "Windows 8/10/11 (64-Bit)",
-                        processor: "Intel i5-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
-                        memory: "8 GB RAM",
-                        graphics: "NVidia 650TI OR AMD R7 250x",
-                        storage: "2 GB متاح"
-                    }
-                },
-                downloadLinks: [
-                    { name: "تحميل اللعبة", url: "https://gofile.io/d/Wrvkr2", icon: "fas fa-download" },
-                    { name: "تحميل ملف الاونلاين", url: "https://gofile.io/d/cfKaqo", icon: "fas fa-wifi" },
-                    { name: "تحميل اخر للعبة", url: "https://pixeldrain.com/u/KgerxNeE", icon: "fas fa-download" }
-                ]
-            }, 
+            },  
             buckshot: {
                 title: "Buckshot Roulette",
                 description: "دةالباسورد بتاع ملفات فك ضغط اللعبة والاونلاين:online-fix.me",
