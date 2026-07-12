@@ -2702,7 +2702,7 @@
                 ]
             },
             ghfgjhg: {
-                title: "dgsgsfdgh",
+                title: "Gaz Simulator",
                 description: "محاكي محطة الوقود - حاليا غير متاح الاونلاين، يتم العمل على تشغيل الاونلاين قريباً",
                 image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2782920/capsule_616x353.jpg?t=1729324325.png",
                 platform: "PC",
