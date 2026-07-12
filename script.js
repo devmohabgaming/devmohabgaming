@@ -214,8 +214,8 @@
                     }
                 },
                 downloadLinks: [
-                    { name: "تحميل اللعبة", url: "https://linkjust.com/XIKKC", icon: "fas fa-download" },
-                    { name: "ملف الاونلاين", url: "https://gofile.io/d/PS0BYh", icon: "fas fa-wifi" },
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/bGvFV2r", icon: "fas fa-download" },
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/OovYwLKqZ", icon: "fas fa-download" },
                     { name: "تحميل مابات اللعبة", url: "https://linkjust.com/KsQqRNMMEhqPGW", icon: "fas fa-download" }
                 ]
             },
