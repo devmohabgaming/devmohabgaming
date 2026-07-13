@@ -879,7 +879,7 @@
                 releaseYear: "2025",
                 language: "العربية + متعدد اللغات",
                 videoId: "#",
-                version: "v0.80",
+                version: "v0.1.80",
                 onlineStatus: true, // متاح اونلاين
                 systemRequirements: {
                     minimum: {
@@ -898,9 +898,9 @@
                     }
                 },
                 downloadLinks: [
-                    { name: "تحميل اللعبة", url: "https://gofile.io/d/7fY3WT", icon: "fas fa-download" },
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/gpZDsFvPH", icon: "fas fa-download" },
                     { name: "تحميل ملف الاونلاين", url: "https://gofile.io/d/XMqfHe", icon: "fas fa-wifi" },
-                    { name: "تحميل اخر للعبة", url: "https://pixeldrain.com/u/kAYXDKo4", icon: "fas fa-download" }
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/yPXzs0tN", icon: "fas fa-download" }
                 ]
             },
             boattogether: {
