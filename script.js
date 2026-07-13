@@ -912,10 +912,10 @@
                 category: "games",
                 size: "1.3G",
                 developer: "Boat Together",
-                releaseYear: "2025",
+                releaseYear: "2026",
                 language: "العربية + متعدد اللغات",
                 videoId: "#",
-                version: "v1.2.3",
+                version: "v0.1.85",
                 onlineStatus: true, // متاح اونلاين
                 systemRequirements: {
                     minimum: {
@@ -934,9 +934,9 @@
                     }
                 },
                 downloadLinks: [
-                    { name: "تحميل اللعبة", url: "https://gofile.io/d/8HJKKf", icon: "fas fa-download" },
-                    { name: "تحميل ملف الاونلاين", url: "https://gofile.io/d/7WVZNd", icon: "fas fa-wifi" },
-                    { name: "تحميل اخر للعبة", url: "https://pixeldrain.com/u/CiKYrnMX", icon: "fas fa-download" }
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/gpZDsFvPH", icon: "fas fa-download" },
+                    { name: "ملف الاونلاين", url: "https://gofile.io/d/XMqfHe", icon: "fas fa-wifi" },
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/yPXzs0tN", icon: "fas fa-download" }
                 ]
             },
             hytale: {
