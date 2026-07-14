@@ -214,7 +214,7 @@
                     }
                 },
                 downloadLinks: [
-                    { name: "تحميل اللعبة", url: "https://linkjust.com/4tOrn", icon: "fas fa-download" },
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/jsd", icon: "fas fa-download" },
                     { name: "ملف الاونلاين", url: "https://gofile.io/d/PS0BYh", icon: "fas fa-download" },
                     { name: "تحميل مابات اللعبة", url: "https://linkjust.com/KsQqRNMMEhqPGW", icon: "fas fa-download" }
                 ]
