@@ -1006,9 +1006,9 @@
                     }
                 },
                 downloadLinks: [
-                    { name: "تحميل اللعبة", url: "https://pixeldrain.com/u/ednxiKhm", icon: "fas fa-download" },
-                    { name: "تحميل ملف الاونلاين", url: "https://linkjust.com/1qbMx4JL08", icon: "fas fa-wifi" },
-                    { name: "تحميل اخر للعبة", url: "https://gofile.io/d/Ojkfar", icon: "fas fa-download" }
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/Muk0qYeO", icon: "fas fa-download" },
+                    { name: "تحميل ملف الاونلاين", url: "https://gofile.io/d/vPbiw7", icon: "fas fa-wifi" },
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/Muk0qYeO", icon: "fas fa-download" }
                 ]
             },
             mimesis: {
