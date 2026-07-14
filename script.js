@@ -1006,9 +1006,9 @@
                     }
                 },
                 downloadLinks: [
-                    { name: "تحميل اللعبة", url: "https://linkjust.com/Muk0qYeO", icon: "fas fa-download" },
-                    { name: "تحميل ملف الاونلاين", url: "https://gofile.io/d/vPbiw7", icon: "fas fa-wifi" },
-                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/Muk0qYeO", icon: "fas fa-download" }
+                    { name: "تحميل اللعبة", url: "https://pixeldrain.com/u/ednxiKhm", icon: "fas fa-download" },
+                    { name: "تحميل ملف الاونلاين", url: "https://linkjust.com/1qbMx4JL08", icon: "fas fa-wifi" },
+                    { name: "تحميل اخر للعبة", url: "https://gofile.io/d/Ojkfar", icon: "fas fa-download" }
                 ]
             },
             mimesis: {
@@ -4869,51 +4869,406 @@ document.addEventListener('DOMContentLoaded',function(){
     setTimeout(renderThreads,300);
 });
 
-/* ================= Language Toggle (AR / EN) ================= */
+/* ================= Language Toggle (AR / EN) — Full Site ================= */
 (function(){
-    const dict = {
-        'nav.home':    { ar:'الرئيسية',       en:'Home' },
-        'nav.games':   { ar:'الألعاب',        en:'Games' },
-        'nav.programs':{ ar:'البرامج',        en:'Programs' },
-        'nav.apps':    { ar:'التطبيقات',      en:'Apps' },
-        'nav.movies':  { ar:'الأفلام',        en:'Movies' },
-        'nav.series':  { ar:'المسلسلات',      en:'Series' },
-        'nav.cartoon': { ar:'الكرتون',        en:'Cartoon' },
-        'nav.store':   { ar:'المتجر',         en:'Store' },
-        'nav.pc':      { ar:'فاحص الجهاز',    en:'PC Checker' },
-        'nav.social':  { ar:'وسائل التواصل',  en:'Social' },
-        'nav.search':  { ar:'بحث متقدم',      en:'Advanced Search' },
-        'ticker.title':{ ar:'آخر التحديثات:', en:'Latest updates:' },
-        'home.latest':    { ar:'أحدث الألعاب',              en:'Latest Games' },
-        'home.latestSub': { ar:'أحدث ما وصل — اضغط لفتح اللعبة', en:'Fresh drops — click to open the game' },
-        'home.top':       { ar:'الأكثر تحميلاً هذا الأسبوع', en:'Top Downloads This Week' },
-        'home.topSub':    { ar:'أعلى 5 ألعاب تم تحميلها',   en:'Top 5 most downloaded games' },
-        'home.downloads': { ar:'تحميل',                     en:'downloads' }
+    // Comprehensive AR -> EN dictionary for the UI chrome (nav, buttons,
+    // labels, headings, placeholders, cart/checkout, toasts, categories…).
+    // Content items (game/movie titles, product descriptions) stay as-is —
+    // they are proper nouns.
+    const MAP = {
+        // Loading / brand
+        "جاري التحميل...":"Loading...",
+        "مرحباً بك في عالم الألعاب والترفيه":"Welcome to the world of gaming and entertainment",
+        "مدونة روابط الألعاب - Mohab Gaming":"Games Links Blog - Mohab Gaming",
+        // Nav
+        "الرئيسية":"Home",
+        "الألعاب":"Games",
+        "البرامج":"Programs",
+        "التطبيقات":"Apps",
+        "الأفلام":"Movies",
+        "المسلسلات":"Series",
+        "الكرتون":"Cartoon",
+        "المتجر":"Store",
+        "المدونة":"Blog",
+        "اتصل بنا":"Contact Us",
+        "فاحص الجهاز":"PC Checker",
+        "عضوية VIP":"VIP Membership",
+        "مساعد AI":"AI Assistant",
+        "المنتدى":"Forum",
+        "وسائل التواصل":"Social",
+        "بحث متقدم":"Advanced Search",
+        "Language / اللغة":"Language / اللغة",
+        // News ticker
+        "آخر الاخبار:":"Latest News:",
+        "آخر التحديثات:":"Latest updates:",
+        "🎮 تم إضافة اخر تحديث للعبة Mecca Chameleon v2.7.0 اللعبة مجاناً بالكامل.":"🎮 Latest update of Mecca Chameleon v2.7.0 has been added — the game is completely free.",
+        "🔥تم العمل الكامل على المتجر الان يمكنكم تجربته وشراء منتجات منه .":"🔥 The store is now fully working — try it and shop from it.",
+        "🛡️ تم فحص وتأمين جميع روابط تحميل الألعاب لعام 2026.":"🛡️ All game download links for 2026 have been checked and secured.",
+        "⭐ تابعنا للحصول على أحدث الألعاب والبرامج أول بأول.":"⭐ Follow us to get the latest games and programs first.",
+        // Floating search
+        "التصنيف":"Category",
+        "الكل":"All",
+        "ألعاب":"Games",
+        "برامج":"Programs",
+        "تطبيقات":"Apps",
+        "أفلام":"Movies",
+        "مسلسلات":"Series",
+        "كرتون":"Cartoon",
+        "الترتيب":"Sort",
+        "الأكثر تطابقاً":"Most Relevant",
+        "أبجدي":"Alphabetical",
+        "الأحدث":"Newest",
+        "ابدأ بالكتابة لرؤية النتائج الفورية":"Start typing to see instant results",
+        "إلغاء":"Cancel",
+        "لعبة متاحة":"available games",
+        "برنامج مفيد":"useful programs",
+        "تطبيق رائع":"great apps",
+        "فيلم ومسلسل":"movies & series",
+        "ابحث في الألعاب، البرامج، التطبيقات، الأفلام، المسلسلات، الكرتون...":"Search games, programs, apps, movies, series, cartoons...",
+        "مسح":"Clear",
+        "إغلاق":"Close",
+        // Home
+        "أحدث الألعاب":"Latest Games",
+        "أحدث ما وصل — اضغط لفتح اللعبة":"Fresh drops — click to open the game",
+        "الأكثر تحميلاً هذا الأسبوع":"Top Downloads This Week",
+        "أعلى 5 ألعاب تم تحميلها":"Top 5 most downloaded games",
+        "تحميل":"downloads",
+        // Page headers
+        "مكتبة الألعاب":"Games Library",
+        "مكتبة البرامج":"Programs Library",
+        "مكتبة التطبيقات":"Apps Library",
+        "مكتبة الأفلام":"Movies Library",
+        "مكتبة المسلسلات":"Series Library",
+        "مكتبة الكرتون":"Cartoon Library",
+        // Filters
+        "جميع المنصات":"All Platforms",
+        "الكمبيوتر":"PC",
+        "الموبايل":"Mobile",
+        "جميع الأنواع":"All Genres",
+        "أكشن":"Action",
+        "كوميديا":"Comedy",
+        "دراما":"Drama",
+        "رعب":"Horror",
+        "إثارة":"Thriller",
+        "جميع الأعمار":"All Ages",
+        "أطفال":"Kids",
+        "عائلي":"Family",
+        "مراهقين":"Teens",
+        "بالغين":"Adults",
+        // Store hero
+        "MG3 Store":"MG3 Store",
+        "عرض مميز":"Featured Offer",
+        "تسوق الآن":"Shop Now",
+        "ابن تجميعتك":"Build Your Rig",
+        "هدية مثالية للأصدقاء":"A perfect gift for friends",
+        "برامج مدفوعة":"Paid Programs",
+        "برامج أصلية بأسعار ممتازة":"Genuine programs at great prices",
+        "شحن ألعاب":"Game Top-ups",
+        "بطاقات شحن لجميع الألعاب":"Recharge cards for all games",
+        "استضافات قوية بأسعار خيالية":"Powerful hosting at incredible prices",
+        "اشتراكات بأفضل الأسعار":"Subscriptions at the best prices",
+        "أحدث وأقوى الألعاب":"Latest and greatest games",
+        "اكتشف أحدث وأقوى الإضافات إلى مكتبتنا من الألعاب المميزة":"Discover the latest and greatest additions to our library of featured games",
+        "حتى":"up to",
+        "العربة":"Cart",
+        "الصندوق الغامض":"Mystery Box",
+        // Store categories (JS)
+        "ألعاب وبطاقات":"Games & Cards",
+        "إكسسوارات":"Accessories",
+        "اشتراكات":"Subscriptions",
+        // Cart / checkout
+        "عربة التسوق":"Shopping Cart",
+        "العربة فارغة":"Your cart is empty",
+        "إتمام الشراء":"Checkout",
+        "إتمام الدفع":"Complete Payment",
+        "طريقة الدفع":"Payment Method",
+        "فودافون كاش":"Vodafone Cash",
+        "إنستاباي":"InstaPay",
+        "فيزا / ماستركارد":"Visa / Mastercard",
+        "باى بال":"PayPal",
+        "تأكيد الطلب":"Confirm Order",
+        "تطبيق":"Apply",
+        "ادخل كود الخصم (جرب: MG3)":"Enter discount code (try: MG3)",
+        "الاسم الكامل":"Full Name",
+        "رقم الهاتف":"Phone Number",
+        "العنوان بالتفصيل":"Full Address",
+        "تم إضافة المنتج للعربة":"Product added to cart",
+        "تم حذف المنتج":"Product removed",
+        "كود غير صالح":"Invalid code",
+        "تم تأكيد طلبك بنجاح! سنتواصل معك قريباً":"Your order has been confirmed! We'll contact you soon",
+        "تم تأكيد طلبك بنجاح!":"Your order has been confirmed!",
+        "أضف للعربة":"Add to Cart",
+        "منتج":"Product",
+        "مميز":"Featured",
+        "عرض":"Offer",
+        "جديد":"New",
+        "الأكثر مبيعاً":"Best Seller",
+        // Product/store extras
+        "وجهتك المتخصصة لشراء الألعاب الإلكترونية بأسعار تنافسية 💰":"Your specialized destination to buy digital games at competitive prices 💰",
+        "مجموعة واسعة من أحدث الألعاب وشحن رصيد سريع لتلبية كل الأذواق 🚀":"A wide selection of the latest games and fast top-ups for every taste 🚀",
+        "بواجهة سهلة الاستخدام تضمن تجربة تسوق مميزة.":"With an easy-to-use interface for a great shopping experience.",
+        // Search placeholders per page
+        "ابحث عن لعبة...":"Search for a game...",
+        "ابحث عن برنامج...":"Search for a program...",
+        "ابحث عن تطبيق...":"Search for an app...",
+        "ابحث عن فيلم...":"Search for a movie...",
+        "ابحث عن مسلسل...":"Search for a series...",
+        "ابحث عن كرتون...":"Search for a cartoon...",
+        "اكتب اسم اللعبة هنا...":"Type the game name here...",
+        "اكتب اسم اللعبة/البرنامج اللي عاوزه":"Type the name of the game/program you want",
+        "لم يتم العثور على نتائج مطابقة":"No matching results found",
+        "لم يتم العثور على نتائج":"No results found",
+        "يرجى إدخال كلمة البحث":"Please enter a search term",
+        // PC Checker
+        "فاحص متطلبات تشغيل الألعاب":"Games Requirements Checker",
+        "أدخل مواصفات جهازك واعرف إذا كان يقدر يشغل اللعبة اللي عاوزها":"Enter your PC specs and see if it can run the game you want",
+        "مواصفات جهازك":"Your PC Specs",
+        "المعالج (CPU)":"Processor (CPU)",
+        "الذاكرة (RAM) - جيجا":"Memory (RAM) - GB",
+        "كرت الشاشة (GPU)":"Graphics Card (GPU)",
+        "مساحة التخزين الفاضية (جيجا)":"Free Storage Space (GB)",
+        "نوع التخزين":"Storage Type",
+        "نظام التشغيل":"Operating System",
+        "اكتب اسم اللعبة":"Type the game name",
+        "اللعبة (اكتب أى لعبة فى العالم بالاسم — مثلاً: GTA 6, Elden Ring, Minecraft, FIFA 25)":"Game (type any game in the world by name — e.g. GTA 6, Elden Ring, Minecraft, FIFA 25)",
+        "افحص هل جهازى يشغلها":"Check if my PC can run it",
+        "اكتب اسم اللعبة الأول":"Type the game name first",
+        // VIP
+        "تحميل أسرع × بدون إعلانات × أولوية في الدعم × روابط حصرية":"Faster downloads × No ads × Priority support × Exclusive links",
+        "اختر الباقة المناسبة":"Choose the right plan",
+        "مجاني":"Free",
+        "للمستخدم العادي":"For regular users",
+        "تحميل عادي":"Regular downloads",
+        "الوصول لكل الألعاب المجانية":"Access to all free games",
+        "فيه إعلانات":"With ads",
+        "سرعة محدودة":"Limited speed",
+        "الباقة الحالية":"Current Plan",
+        "VIP شهري":"VIP Monthly",
+        "الأكثر طلباً":"Most Popular",
+        "تحميل بسرعة x5":"5x download speed",
+        "إزالة جميع الإعلانات":"No ads at all",
+        "أولوية الدعم الفني":"Priority tech support",
+        "روابط حصرية للأعضاء":"Members-only exclusive links",
+        "شارة VIP بجانب اسمك":"VIP badge next to your name",
+        "اشترك الآن":"Subscribe Now",
+        "VIP سنوي":"VIP Yearly",
+        "وفر 33%":"Save 33%",
+        "كل ميزات الشهري":"All monthly plan features",
+        "شهرين مجاناً":"Two months free",
+        "طلب ألعاب مخصصة":"Custom game requests",
+        "دعم على واتساب مباشر":"Live WhatsApp support",
+        "اشترك سنوي":"Subscribe Yearly",
+        "حالتك الحالية: مستخدم عادي. اشترك في VIP للاستمتاع بكل الميزات.":"Your current status: Regular user. Subscribe to VIP to enjoy all features.",
+        // Contact
+        "تواصل معنا":"Contact Us",
+        "اختر القناة المفضلة لديك وتواصل مع فريق Mohab Gaming في أي وقت":"Pick your favorite channel and reach the Mohab Gaming team any time",
+        "نشط":"Active",
+        "قناة اليوتيوب":"YouTube Channel",
+        "تابعنا على القناة الرسمية لأحدث الشروحات والمراجعات والعروض الحصرية":"Follow our official channel for the latest tutorials, reviews and exclusive offers",
+        "رائج":"Trending",
+        "حساب التيك توك":"TikTok Account",
+        "تابعنا على تيك توك لأحدث الفيديوهات القصيرة والمحتوى الحصري":"Follow us on TikTok for the latest short videos and exclusive content",
+        "تابع الآن":"Follow Now",
+        "فوري":"Live",
+        "سيرفر الديسكورد":"Discord Server",
+        "انضم لمجتمعنا النشط، تفاعل مع الأعضاء واحصل على دعم مباشر على مدار الساعة":"Join our active community, chat with members and get 24/7 live support",
+        "انضم للسيرفر":"Join Server",
+        "رسمي":"Official",
+        "البريد الإلكتروني":"Email",
+        "راسلنا مباشرة للاستفسارات الرسمية، طلبات الشراكة، أو الإبلاغ عن المشاكل":"Message us directly for official inquiries, partnerships, or issues",
+        "أرسل رسالة":"Send Message",
+        // Item modal
+        "تفاصيل العنصر":"Item Details",
+        "مساعدة":"Help",
+        "المطور":"Developer",
+        "المخرج":"Director",
+        "نسخ":"Copy",
+        // Footer
+        "وجهتك الأولى لتحميل أحدث الألعاب والبرامج والتطبيقات المجانية بأمان وسرعة عالية، ومشاهدة أفضل الأفلام والمسلسلات والكرتون.":"Your #1 destination to download the latest free games, programs and apps safely and quickly, and to watch the best movies, series and cartoons.",
+        "روابط سريعة محدثة":"Updated Quick Links",
+        "الفئات":"Categories",
+        "ألعاب الأكشن":"Action Games",
+        "ألعاب المغامرات":"Adventure Games",
+        "ألعاب الرياضة":"Sports Games",
+        "برامج التصميم":"Design Software",
+        "تطبيقات معدلة":"Modded Apps",
+        "أفلام حديثة":"Recent Movies",
+        "مسلسلات عربية":"Arabic Series",
+        "كرتون أطفال":"Kids Cartoons",
+        "السيرفر الرسمي":"Official Server",
+        "© 2026 Mohab Gaming. جميع الحقوق محفوظة.":"© 2026 Mohab Gaming. All rights reserved.",
+        // Toasts / navigation feedback
+        "تم فتح/إغلاق القائمة":"Menu toggled",
+        "تم إغلاق التفاصيل":"Details closed",
+        "تم الانتقال إلى أعلى الصفحة":"Scrolled to top",
+        "بدء التحميل...":"Starting download...",
+        "متاح اونلاين":"Online available",
+        "غير متاح اونلاين":"Online not available",
+        "رابط التحميل":"Download link",
+        "تحميل مباشر":"Direct download",
+        "تحميل اخر":"Another download",
+        "رابط اخر":"Another link",
+        "رابط بديل":"Alternative link",
+        "تحميل الفيلم":"Download movie",
+        "تحميل HD":"Download HD",
+        "تحميل 4K":"Download 4K",
+        "تحميل الموسم الأول":"Download Season 1",
+        "تحميل جميع المواسم":"Download all seasons",
+        "تحميل الكلاسيكي":"Download classic",
+        "تحميل الحديث":"Download modern",
+        "تحميل للكمبيوتر":"Download for PC",
+        "تحميل للموبايل":"Download for Mobile",
+        "تحميل اللعبة":"Download game",
+        "ملف الاونلاين":"Online file",
+        "تحميل مابات اللعبة":"Download game maps",
+        "تحميل اخر للعبة":"Another game download",
+        "تحميل ملف الاونلاين":"Download online file",
+        "تحميل برنامج التورينت":"Download the torrent client",
+        "الاونلاين داخل ملف اللعبة":"Online is inside the game file",
+        "لعبة محاكى Simulator ولايوجد بها اونلاين":"Simulator game — no online mode",
+        "ملف Apk":"APK file",
+        "ملف APK":"APK file",
+        "غير متاح حاليا ملف الاونلاين":"Online file currently unavailable",
+        "الرئيسية":"Home",
+        "لا توجد منتجات مطابقة":"No matching products",
+        // Spec labels
+        "المعالج":"Processor",
+        "الذاكرة":"Memory",
+        "كرت الشاشة":"Graphics Card",
+        "مساحة التخزين":"Storage",
+        "الرام":"RAM",
+        "المساحة":"Space"
     };
-    const iconRe = /<i[^>]*><\/i>\s*/;
+
+    // Also normalize with collapsed whitespace so multi-line strings match.
+    const NORM = {};
+    for (const k in MAP) NORM[k.replace(/\s+/g,' ').trim()] = MAP[k];
+
+    const ATTRS = ['placeholder','title','aria-label','alt'];
+    const SKIP_TAGS = new Set(['SCRIPT','STYLE','NOSCRIPT','CODE','PRE']);
+    const ORIG_TEXT = new WeakMap();   // textNode -> original nodeValue
+    const ORIG_ATTR = new WeakMap();   // element  -> {attr:value}
+
+    function translateText(raw){
+        if (!raw) return null;
+        const norm = raw.replace(/\s+/g,' ').trim();
+        if (!norm) return null;
+        const en = NORM[norm];
+        if (!en) return null;
+        // preserve leading / trailing whitespace of the original text node
+        const lead = raw.match(/^\s*/)[0];
+        const tail = raw.match(/\s*$/)[0];
+        return lead + en + tail;
+    }
+
+    function walkTranslate(root, lang){
+        if (!root) return;
+        // Text nodes
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+            acceptNode(n){
+                if (!n.parentNode || SKIP_TAGS.has(n.parentNode.nodeName)) return NodeFilter.FILTER_REJECT;
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        });
+        const nodes = [];
+        let cur; while ((cur = walker.nextNode())) nodes.push(cur);
+        for (const n of nodes){
+            if (lang === 'en'){
+                const en = translateText(n.nodeValue);
+                if (en && en !== n.nodeValue){
+                    if (!ORIG_TEXT.has(n)) ORIG_TEXT.set(n, n.nodeValue);
+                    n.nodeValue = en;
+                }
+            } else {
+                if (ORIG_TEXT.has(n)){
+                    n.nodeValue = ORIG_TEXT.get(n);
+                }
+            }
+        }
+        // Attributes
+        const els = (root.nodeType === 1)
+            ? [root, ...root.querySelectorAll('*')]
+            : Array.from(root.querySelectorAll ? root.querySelectorAll('*') : []);
+        for (const el of els){
+            if (!el.getAttribute) continue;
+            for (const a of ATTRS){
+                if (!el.hasAttribute(a)) continue;
+                if (lang === 'en'){
+                    const v = el.getAttribute(a);
+                    const en = translateText(v);
+                    if (en && en !== v){
+                        const store = ORIG_ATTR.get(el) || {};
+                        if (!(a in store)) store[a] = v;
+                        ORIG_ATTR.set(el, store);
+                        el.setAttribute(a, en);
+                    }
+                } else {
+                    const store = ORIG_ATTR.get(el);
+                    if (store && (a in store)) el.setAttribute(a, store[a]);
+                }
+            }
+        }
+    }
+
+    let currentLang = 'ar';
+    let observer = null;
+
     function applyLang(lang){
+        currentLang = lang;
         document.documentElement.lang = lang;
         document.documentElement.dir  = lang === 'ar' ? 'rtl' : 'ltr';
-        document.querySelectorAll('[data-i18n]').forEach(el=>{
-            const key = el.getAttribute('data-i18n');
-            const val = dict[key] && dict[key][lang];
-            if(!val) return;
-            const iconMatch = el.innerHTML.match(iconRe);
-            el.innerHTML = (iconMatch ? iconMatch[0] : '') + val;
-        });
+        walkTranslate(document.body, lang);
         const label = document.getElementById('langLabel');
-        if(label) label.textContent = lang === 'ar' ? 'EN' : 'ع';
+        if (label) label.textContent = lang === 'ar' ? 'EN' : 'ع';
+        const btn = document.getElementById('langToggleBtn');
+        if (btn) btn.setAttribute('aria-label', lang === 'ar' ? 'Switch to English' : 'التبديل للعربية');
         try { localStorage.setItem('mg_lang', lang); } catch(e){}
     }
+
     window.toggleLanguage = function(){
-        const cur = document.documentElement.lang || 'ar';
-        applyLang(cur === 'ar' ? 'en' : 'ar');
+        applyLang(currentLang === 'ar' ? 'en' : 'ar');
     };
-    document.addEventListener('DOMContentLoaded', ()=>{
+    window.applyLang = applyLang;
+
+    function startObserver(){
+        if (observer || !document.body) return;
+        observer = new MutationObserver(muts => {
+            if (currentLang !== 'en') return;
+            for (const m of muts){
+                for (const node of m.addedNodes){
+                    if (node.nodeType === 1) walkTranslate(node, 'en');
+                    else if (node.nodeType === 3){
+                        const en = translateText(node.nodeValue);
+                        if (en && en !== node.nodeValue){
+                            ORIG_TEXT.set(node, node.nodeValue);
+                            node.nodeValue = en;
+                        }
+                    }
+                }
+                if (m.type === 'characterData' && m.target && m.target.nodeType === 3){
+                    const en = translateText(m.target.nodeValue);
+                    if (en && en !== m.target.nodeValue){
+                        if (!ORIG_TEXT.has(m.target)) ORIG_TEXT.set(m.target, m.target.nodeValue);
+                        m.target.nodeValue = en;
+                    }
+                }
+            }
+        });
+        observer.observe(document.body, { childList:true, subtree:true, characterData:true });
+    }
+
+    function boot(){
+        startObserver();
         let saved = 'ar';
         try { saved = localStorage.getItem('mg_lang') || 'ar'; } catch(e){}
-        if(saved !== 'ar') applyLang(saved);
-    });
+        // Give the app a tick so initial dynamic renders exist first.
+        setTimeout(()=>{ if (saved !== 'ar') applyLang(saved); else applyLang('ar'); }, 50);
+    }
+    if (document.readyState === 'loading'){
+        document.addEventListener('DOMContentLoaded', boot);
+    } else {
+        boot();
+    }
 })();
 
 /* ================= Home: Latest Games Carousel + Top Downloads ================= */
