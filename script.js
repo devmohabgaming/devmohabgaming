@@ -183,7 +183,43 @@
 
         // Enhanced Data with Online Status Control
         const gamesData = {
-        mecchachameleon: {
+        pyramidion: {
+                title: "Pyramidion",
+                description: "دةالباسورد بتاع ملفات فك ضغط اللعبة والاونلاين:online-fix.me",
+                image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4024600/d0f7872cb6098a45ce60f4761c414a469f2befd3/capsule_616x353.jpg?t=1780968306.png",
+                platform: "PC",
+                rating: 4.9,
+                category: "games",
+                size: "1.66G",
+                developer: "Meccha Chameleon",
+                releaseYear: "2026",
+                language: "العربية + متعدد اللغات",
+                videoId: "#",
+                version: "v19062026",
+                onlineStatus: true, // متاح اونلاين
+                systemRequirements: {
+                    minimum: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i3-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R5 240",
+                        storage: "5 GB متاح"
+                    },
+                    recommended: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i5-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R7 250x",
+                        storage: "5 GB متاح"
+                    }
+                },
+                downloadLinks: [
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/ODGhxvZDoN", icon: "fas fa-download" },
+                    { name: "ملف الاونلاين", url: "https://gofile.io/d/V3V5sw", icon: "fas fa-download" },
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/ODGhxvZDoN", icon: "fas fa-download" }
+                ]
+            },
+                   mecchachameleon: {
                 title: "Meccha Chameleon",
                 description: "دةالباسورد بتاع ملفات فك ضغط اللعبة والاونلاين:online-fix.me",
                 image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4704690/163e2a742e5fb8e1f5d1e3a890da98f04ab809d4/header.jpg?t=1781108224.png",
@@ -214,9 +250,9 @@
                     }
                 },
                 downloadLinks: [
-                    { name: "تحميل اللعبة", url: "https://linkjust.com/jsd", icon: "fas fa-download" },
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/5hYsg4kXN", icon: "fas fa-download" },
                     { name: "ملف الاونلاين", url: "https://gofile.io/d/PS0BYh", icon: "fas fa-download" },
-                    { name: "تحميل مابات اللعبة", url: "https://linkjust.com/KsQqRNMMEhqPGW", icon: "fas fa-download" }
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/RVC3k8jb", icon: "fas fa-download" }
                 ]
             },
             repo: {
@@ -1311,7 +1347,7 @@
                 releaseYear: "2025",
                 language: "العربية + متعدد اللغات",
                 videoId: "#",
-                version: "v1.08.1",
+                version: "v1.07a",
                 onlineStatus: true, // متاح اونلاين
                 systemRequirements: {
                     minimum: {
@@ -1330,9 +1366,9 @@
                     }
                 },
                 downloadLinks: [
-                    { name: "تحميل اللعبة", url: "https://linkjust.com/V42Qu", icon: "fas fa-download" },
-                    { name: "تحميل ملف الاونلاين", url: "https://linkjust.com/2qMmlZ8mtE", icon: "fas fa-wifi" },
-                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/V42Qu", icon: "fas fa-download" }
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/RXpbtFHJJSg", icon: "fas fa-download" },
+                    { name: "تحميل ملف الاونلاين", url: "https://gofile.io/d/b8f9Th", icon: "fas fa-wifi" },
+                    { name: "تحميل اخر للعبة", url: "https://gofile.io/d/9Z4UVM", icon: "fas fa-download" }
                 ]
             },
             darkwater: {
