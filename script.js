@@ -231,7 +231,7 @@
                 releaseYear: "2026",
                 language: "العربية + متعدد اللغات",
                 videoId: "WCUhRdcLcRY",
-                version: "v2.8.0",
+                version: "v3.0.1",
                 onlineStatus: true, // متاح اونلاين
                 systemRequirements: {
                     minimum: {
@@ -250,9 +250,9 @@
                     }
                 },
                 downloadLinks: [
-                    { name: "تحميل اللعبة", url: "https://linkjust.com/OhSooHk5", icon: "fas fa-download" },
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/sa9V", icon: "fas fa-download" },
                     { name: "ملف الاونلاين", url: "https://gofile.io/d/PS0BYh", icon: "fas fa-download" },
-                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/5hYsg4kXN", icon: "fas fa-download" }
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/OhSooHk5", icon: "fas fa-download" }
                 ]
             },
             repo: {
