@@ -183,7 +183,79 @@
 
         // Enhanced Data with Online Status Control
         const gamesData = {
-        mecchachameleon: {
+        dirtybusiness: {
+                title: "Dirty Business",
+                description: "دةالباسورد بتاع ملفات فك ضغط اللعبة والاونلاين:online-fix.me",
+                image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4324480/0bf41369aa9d8f70fd5b1dfcf9b71b0a5b1074f3/header.jpg?t=1784733062.png",
+                platform: "PC",
+                rating: 4.9,
+                category: "games",
+                size: "4.31G",
+                developer: "Dirty Business",
+                releaseYear: "2026",
+                language: "العربية + متعدد اللغات",
+                videoId: "WCUhRdcLcRY",
+                version: "v22072026",
+                onlineStatus: true, // متاح اونلاين
+                systemRequirements: {
+                    minimum: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i3-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R5 240",
+                        storage: "5 GB متاح"
+                    },
+                    recommended: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i5-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R7 250x",
+                        storage: "5 GB متاح"
+                    }
+                },
+                downloadLinks: [
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/PREm", icon: "fas fa-download" },
+                    { name: "ملف الاونلاين", url: "https://gofile.io/d/jncPtM", icon: "fas fa-download" },
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/x2kXqTsR", icon: "fas fa-download" }
+                ]
+            },
+            shiftatmidnight: {
+                title: "Shift At Midnight",
+                description: "دةالباسورد بتاع ملفات فك ضغط اللعبة والاونلاين:online-fix.me",
+                image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3722330/759ecea2ffe1ad3819aefdda79e265b8b332bf8f/header.jpg?t=1784799421.png",
+                platform: "PC",
+                rating: 4.9,
+                category: "games",
+                size: "412MB",
+                developer: "Shift At Midnight",
+                releaseYear: "2026",
+                language: "العربية + متعدد اللغات",
+                videoId: "WCUhRdcLcRY",
+                version: "v1.0.1.0717.2216",
+                onlineStatus: true, // متاح اونلاين
+                systemRequirements: {
+                    minimum: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i3-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R5 240",
+                        storage: "5 GB متاح"
+                    },
+                    recommended: {
+                        os: "Windows 8/10/11 (64-Bit)",
+                        processor: "Intel i5-4170 @ 3.7Ghz OR Intel i5 750 @ 2.67Ghz",
+                        memory: "8 GB RAM",
+                        graphics: "NVidia 650TI OR AMD R7 250x",
+                        storage: "5 GB متاح"
+                    }
+                },
+                downloadLinks: [
+                    { name: "تحميل اللعبة", url: "https://linkjust.com/iBrh728rCECCO", icon: "fas fa-download" },
+                    { name: "ملف الاونلاين", url: "https://gofile.io/d/LR3o37", icon: "fas fa-download" },
+                    { name: "تحميل اخر للعبة", url: "https://linkjust.com/H7mYka", icon: "fas fa-download" }
+                ]
+            },
+                   mecchachameleon: {
                 title: "Meccha Chameleon",
                 description: "دةالباسورد بتاع ملفات فك ضغط اللعبة والاونلاين:online-fix.me",
                 image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4704690/163e2a742e5fb8e1f5d1e3a890da98f04ab809d4/header.jpg?t=1781108224.png",
@@ -3458,6 +3530,18 @@
             // Initialize particles
             initializeParticles();
             
+            // Progress bar animation
+            let progress = 0;
+            const bar = document.getElementById('loadingBar');
+            const pct = document.getElementById('loadingPercent');
+            const progressInterval = setInterval(() => {
+                progress += Math.floor(Math.random() * 6) + 2;
+                if (progress >= 100) progress = 100;
+                if (bar) bar.style.width = progress + '%';
+                if (pct) pct.textContent = progress + '%';
+                if (progress === 100) clearInterval(progressInterval);
+            }, 60);
+
             // Hide loading screen with enhanced animation
             setTimeout(() => {
                 document.getElementById('loadingScreen').style.opacity = '0';
